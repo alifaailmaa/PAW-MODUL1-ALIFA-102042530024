@@ -1,0 +1,278 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+
+.header {
+    background-color: #FF95A5;
+    border-bottom: 1px solid #FFDBB0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #FFFFFF;
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+
+.hero {
+    background-color: #FF95A5;
+    color: #FFFFFF;
+    padding: 56px 48px;
+    border-radius: 16px;
+    margin-bottom: 48px;
+}
+
+
+.hero h1 {
+    font-size: 38px;
+    margin: 12px 0;
+    font-weight: 700;
+}
+
+.hero p {
+    color: #FFFFFF;
+    margin-bottom: 24px;
+    max-width: 500px;
+}
+
+.btn-hero {
+    display: inline-block;
+    background-color: #FFFFFF;
+    color: #FF95A5;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: opacity 0.2s ease;
+}
+
+.btn-hero:hover {
+    opacity: 0.85;
+}
+
+
+.catalog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 28px;
+}
+
+.sub-title {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: #FF95A5;
+    font-weight: 700;
+}
+
+.catalog-header h2 {
+    font-size: 26px;
+    color: #FF95A5;
+}
+
+.product-count {
+    font-size: 14px;
+    background-color: #FF95A5;
+    padding: 6px 14px;
+    border-radius: 20px;
+    color: #FFFFFF;
+}
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+
+.product-card {
+    background: #FF95A5;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.category-badge {
+    font-size: 11px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+}
+
+.status-badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.status-badge.available {
+    background-color: #def7ec;
+    color: #03543f;
+}
+
+.status-badge.unavailable {
+    background-color: #fde8e8;
+    color: #9b1c1c;
+}
+
+.product-title {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.price-container {
+    margin-bottom: 8px;
+}
+
+.old-price {
+    display: block;
+    font-size: 13px;
+    color: #a0aec0;
+    text-decoration: line-through;
+}
+
+.current-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.current-price.discount {
+    color: #FFFAD3;
+}
+
+.stock-info {
+    font-size: 13px;
+    color: #718096;
+    margin-bottom: 20px;
+}
+
+/* Card Button */
+.btn-buy {
+    width: 100%;
+    padding: 12px;
+    background-color: #FFB1B1;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.btn-buy:hover {
+    opacity: 0.85;
+}
+
+.btn-buy.disabled {
+    background-color: #e2e8f0;
+    color: #a0aec0;
+    cursor: not-allowed;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 32px 24px;
+    border-top: 1px solid #e2e8f0;
+    color: #718096;
+    font-size: 14px;
+    margin-top: 60px;
+    background-color: #ffffff;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero {
+        padding: 36px 24px;
+    }
+    
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .catalog-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
